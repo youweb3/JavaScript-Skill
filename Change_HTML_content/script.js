@@ -4,9 +4,14 @@ function changeText (){
     //then we change the content of the element using the innerHTML property--
     //-- and assign new text to the HTML h1
     element.innerHTML = "Hello World ! This is my Javascript Skill!"
-    
     //instead of innerHTML we can use 'textContent'
 
+    console.log('The pages is loaded!');
+    
+    //console.log() is a method that writes a message to the console.it is used for debugging purposes.
+    //when working with JavaScript, console.log() is used to print content to the console.
+    //it is useful for testing purposes, and also used to log errors and warnings.
+    //it is a good practice to use console.log() to log messages and variables to the console.
 }
 
 
