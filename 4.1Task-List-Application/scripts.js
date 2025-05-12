@@ -5,10 +5,12 @@ let tasks = [];
 
 function addTask() {
     const inputTask = document.getElementById("taskInput").value; //get the value of the input field
+
     if (inputTask) {
         tasks.push(inputTask); //add the task to the array, push method is used to add an element to the end of an array
         document.getElementById("taskInput").value = ""; //clear the input field
         displayTask();  // this function will display the tasks in the list
+
     } else {
         alert("please enter yout task");
     }
@@ -18,12 +20,25 @@ function addTask() {
 
 function displayTask(){
     const listOfTasks = document.getElementById('taskList'); //get the taskList ul element
-    listOfTasks.innerHTML = ""; // clear the current task list
+    listOfTasks.innerHTML = ""; // clear the list before displaying new tasks
+    
     tasks.forEach((task, index) => {
         const li = document.createElement('li'); //create a new list item for each task
-        li.textContent = task; //set the text of the list content to the task
-        const removeButton = document.createElement('button'); //create a remove button
-        removeButton.textContent = "Remove"; //set the button text to "Remove"
+        
+        //create the checkbox to mark tasks as completed
+        const checkbox = document.createElement('input');
+        checkbox.type = "checkbox";
+        checkbox.onchange = () => {
+            console.log("Checkbox state changed:", checkbox.checked);
+            li.classList.toggle('completed', checkbox.checked); //toggle the completed class on the list item
+        };
+
+        li.textContent = task;//set the text of the list content to the task
+        li.prepend(checkbox); //add the checkbox to the beginning or before of the list item
+
+        //create the "remove" button for each task
+        const removeButton = document.createElement('button');
+        removeButton.textContent = "Remove";
         removeButton.onclick = () => removeTask(index); //add a click event listener to the button
         li.appendChild(removeButton); //append the button to the list item  
         listOfTasks.appendChild(li); //append the list item to the task list
