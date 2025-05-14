@@ -1,0 +1,45 @@
+/* Default Light Mode Styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    background-color: #9a0b0b;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #eeeeee;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.5s, color 0.5s, transform 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background-color: #444444;
+}
+
+button.dark-mode {
+    background-color: #555555;
+    color: #ffffff;
+}
