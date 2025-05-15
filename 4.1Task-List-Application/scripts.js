@@ -36,6 +36,19 @@ function displayTask(){
         li.textContent = task;//set the text of the list content to the task
         li.prepend(checkbox); //add the checkbox to the beginning or before of the list item
 
+
+        //create an "EDIT" button
+        const editButton = document.createElement("button")
+        editButton.textContent = "Edit";
+        editButton.onclick = () => {
+            const newTask = prompt("Edit your Task:", task)
+            if(newTask){
+                tasks[index] = newTask; // update the task in the array
+                displayTask(); // refresh the task list
+            }
+        };
+        li.appendChild(editButton);
+
         //create the "remove" button for each task
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
@@ -44,13 +57,6 @@ function displayTask(){
         listOfTasks.appendChild(li); //append the list item to the task list
     });
 
-            // Create and append the "Clear All" button below the list
-            if (tasks.length > 0) {
-                const clearAllButton = document.createElement('button');
-                clearAllButton.textContent = "Clear All";
-                clearAllButton.onclick = () => clearAllTasks();
-                taskList.appendChild(clearAllButton);
-            }
 
 }
 
@@ -61,18 +67,14 @@ function removeTask(index) {
     displayTask(); //update the task list display
 }
 
-// //Function to clear all tasks
-function clearAllTasks() {
-    tasks = []; //clear the tasks array
-    const listOfTasks = document.getElementById('taskList'); //get the taskList ul element
-    listOfTasks.innerHTML = ""; // clear the current task list  
-    displayTask(); //update the task list display
-}
 
 
 //this function for "clearAllTask" button in HTML file
 
-// function clearAllTasks() {
-//   tasks = []; //clear the tasks array
-//   displayTask(); //update the task list display
-// }
+ function clearAllTasks() {
+    console.log("working");
+    tasks = []; //clear the tasks array
+    displayTask(); //update the task list display
+    alert("All tasks have been cleared!"); //alert the user
+    
+};
