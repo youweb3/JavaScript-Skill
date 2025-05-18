@@ -15,7 +15,7 @@ function toggleMode() {
     if (body.classList.contains('dark-mode')) {
         toggleButton.textContent = '☀️ Switch to Light Mode';
     } else {
-        toggleButton.textContent = '🌙 Switch to Dark Mode';
+        toggleButton.textContent = '🌙Switch to Dark Mode';
     }
 
 }
