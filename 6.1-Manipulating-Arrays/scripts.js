@@ -3,6 +3,7 @@ let array = [];
 function addElement() {
     const inputValue = document.getElementById("inputField").value;
     array.push(inputValue);
+    document.getElementById("inputField").value = ""; // Clear the input field after adding the element
     console.log(array);
 }
 
@@ -21,6 +22,7 @@ function addFirst(){
     //Variable names inside functions are independent — they don't have to match.
     //You can name your variables whatever makes sense to you or makes the code clearer.
     array.unshift(inputElement);
+    document.getElementById("inputField").value = ""; // Clear the input field after adding the element
     console.log(array);
 }
 
