@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Interactive Image Gallery </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive Image Gallery</h1>
+
+      <div class="input-area">
+        <input type="text" id="imageUrl" placeholder="Enter image URL" />
+        <button id="addImage">Add Image</button>
+      </div>
+
+      <div id="gallery"></div> 
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
