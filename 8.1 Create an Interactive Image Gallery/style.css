@@ -42,3 +42,38 @@ button#addImage:hover {
     background-color: #043269;
     color: yellow;
 }
+
+.gallery {
+  display: grid;
+  gap: 30px;
+}
+
+.gallery-item {
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.remove-btn{
+  margin-top: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: white;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #007bff;
+}
