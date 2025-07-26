@@ -43,3 +43,6 @@ function removeTask(index) {
     tasks.splice(index, 1); // Remove the task from the array
     displayTasks(); // Call function to display tasks again
 }
+
+//Connect the "Add Task" button to the addTask functiion
+document.getElementById(`addTaskButton`).addEventListener(`click`, addTask);
